@@ -16,7 +16,7 @@ import gov.nasa.rover.modules.photo.beans.PhotoData;
 import gov.nasa.rover.modules.photo.beans.Photos;
 import gov.nasa.rover.modules.photo.common.Constants;
 import gov.nasa.rover.modules.photo.exception.RoverPhotoException;
-import gov.nasa.rover.modules.photo.reset.PhotoResetClient;
+import gov.nasa.rover.modules.photo.reset.PhotoRestClient;
 
 /**
  * PhotoServicesImpl is a java service class to hold application services class by implementing PhotoService
@@ -28,11 +28,11 @@ import gov.nasa.rover.modules.photo.reset.PhotoResetClient;
 
 public class PhotoServicesImpl implements PhotoService{
 	
-	private PhotoResetClient photoResetClient=null;
+	private PhotoRestClient photoRestClient=null;
 	private static final String NAVCAM  = "NAVCAM";
 	
 	public PhotoServicesImpl() throws RoverPhotoException {
-		photoResetClient=new PhotoResetClient();
+		photoRestClient=new PhotoRestClient();
 	}
 	
 	public Map<String, ArrayList<String>> getLastTenDaysPhotos() throws RoverPhotoException{
@@ -53,7 +53,7 @@ public class PhotoServicesImpl implements PhotoService{
 
 		List<PhotoData> photoList=null;
 		try {
-			HttpURLConnection response=photoResetClient.getPhotoCallback(earthDate,cameraName);
+			HttpURLConnection response=photoRestClient.getPhotoCallback(earthDate,cameraName);
 			int status=response.getResponseCode();
 			switch(status) {
 			case Constants.SUCCESS_CODE:

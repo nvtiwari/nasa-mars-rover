@@ -9,7 +9,7 @@ package gov.nasa.rover.modules.photo.common;
 public class Constants {
 	
 	//properties file path
-	public static final String APPLICATION_PROPERTIES_PATH="src/main/resources/application.properties";
+	public static final String APPLICATION_PROPERTIES="application.properties";
 	
 	//Properties file keys constant
 	public static final String ROVER_PHOTO_END_POINT="rover-photo-end-point";
