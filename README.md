@@ -20,9 +20,10 @@ To build this project please follow the below steps:
 
 ## Compile/Run the Project:
 ```
-mvn install 
+1.) mvn install 
 // Program Main class i.e. RoverPhotoApplication sits under the package gov.nasa.rover.modules.photo.main
-Download source-code in eclipse workspace and Run As -> Java Application to get the desired output.
+2.) Run As -> Java Application in IDE or use cmd prompt and execute following jar using 'java -jar nasa-mars-rover-jar-with-dependencies.jar' in target folder :
+// Sample base directory :: C:\Users\Nav\workspace\nasa-mars-rover\target>java -jar nasa-mars-rover-jar-with-dependencies.jar
 ```
 
 ## Sample Application Output:
