@@ -14,11 +14,16 @@ To build this project please follow the below steps:
 
 
 ## Common Maven Commands: 
-* mvn test: It will compile the code of the application along with tests.
-* mvn test: it will compile application code and will tell if there are any errors.
+* mvn compile: It will compile the code of the application along with tests.
+* mvn test: it will test application code and will tell if there are any errors.
 * mvn install: it will execute tests and install the library in the local maven repository sitting under the .m2 folder.
 
 ## Compile/Run the Project:
+```
+mvn install 
+// Program Main class i.e. RoverPhotoApplication sits under the package gov.nasa.rover.modules.photo.main
+Download source-code in eclipse workspace and Run As -> Java Application to get the desired output.
+```
 
 ## Sample Application Output:
 Following is the current sample output JSON that gets the navigation camera images from the curiosity rover from the last 10 days and limit the number of
